@@ -1,249 +1,135 @@
-# Personalized Career & Education Advisor 🎓✨
+# Student Career Guide
 
-An AI-powered mentor that helps students and professionals **choose careers, identify skill gaps, and build personalized education roadmaps** with multi-AI integration and government data insights.
+A focused career guidance platform designed specifically for students in Class 10 and 12, with emphasis on careers suitable for students with lower academic grades.
 
-## 🚀 Features
+## Features
 
-### Core Features
-✅ **Profile Builder** - Comprehensive education, skills, and interests assessment  
-✅ **AI-Powered Career Matching** - Multi-provider AI recommendations  
-✅ **Skill Gap Analysis** - Identify missing skills with priority ranking  
-✅ **Personalized Roadmaps** - Step-by-step learning paths with timeline  
-✅ **Resource Recommendations** - Curated courses from multiple platforms  
-✅ **AI Chat Advisor** - Multi-provider conversational guidance  
+- **Student-Focused Onboarding**: Simple 4-step profile creation process
+- **Low-Grade Friendly Careers**: Career recommendations suitable for students with 40-60% marks
+- **Parent Mode**: Detailed explanations for parents to understand career choices
+- **Career Comparison**: Side-by-side comparison of different career paths
+- **Realistic Career Options**: Focus on practical, achievable careers like:
+  - Digital Marketing
+  - Graphic Design
+  - Content Creation
+  - Teaching
+  - Hospitality & Tourism
+  - Fitness Training
+  - Beauty & Wellness
+  - Retail & Sales
 
-### Enhanced Features
-🔥 **Multi-AI Integration** - OpenAI, Gemini, Hugging Face, OpenRouter  
-🏛️ **Government Data Integration** - Real-time employment data from data.gov.in  
-🎯 **Job Market Insights** - Live demand trends and salary data  
-💰 **Government Schemes** - Personalized scholarship and program recommendations  
-📄 **Resume Analyzer** - AI-powered resume feedback and optimization  
-🎤 **Voice Assistant** - Speech-to-text and text-to-speech capabilities  
-🏆 **Gamification** - XP points, badges, and progress tracking  
-🎯 **Interview Coach** - AI-generated practice questions with feedback  
-🌐 **Multilingual Support** - Hindi, English, and regional languages  
+## Target Audience
 
-## 🛠 Tech Stack
+This platform is specifically designed for:
 
-- **Frontend:** React + TypeScript + Tailwind CSS
-- **AI Providers:** OpenAI, Google Gemini, Hugging Face, OpenRouter
-- **Data Sources:** data.gov.in APIs, employment statistics
-- **State Management:** React Hooks + Local Storage
-- **UI Components:** Custom components with shadcn/ui patterns
-- **Voice:** Web Speech API (Speech Recognition & Synthesis)
-- **Visualization:** Custom timeline components
-- **Export:** HTML/PDF generation
+- Students in Class 10 and 12
+- Students with academic scores between 40-70%
+- Students looking for practical, achievable career paths
+- Parents who want to understand their child's career options
 
-## 🏗 Architecture
+## Tech Stack
+
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **Routing**: React Router
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## Project Structure
 
 ```
-User Input → Multi-AI Processing → Government Data Integration → Personalized Output
-     ↓              ↓                        ↓                        ↓
-Profile Builder → Career Matching → Market Analysis → Roadmap Generation
-     ↓              ↓                        ↓                        ↓
-Voice Input → Resume Analysis → Scheme Matching → Interview Coaching
+src/
+├── components/          # React components
+│   ├── Home/           # Landing page
+│   ├── Navigation/     # Simple navigation
+│   └── Student/        # Student-specific features
+│       ├── StudentOnboarding.tsx
+│       ├── StudentDashboard.tsx
+│       ├── CareerRecommendationCard.tsx
+│       ├── CareerComparisonModal.tsx
+│       └── ParentModeExplanation.tsx
+├── data/               # Career path data
+│   └── studentCareerPaths.ts
+├── services/           # Career recommendation logic
+│   └── studentCareerService.ts
+└── types/              # TypeScript definitions
+    └── student.ts
 ```
 
-## 🤖 AI Provider Integration
+## Key Features
 
-### 1. OpenAI API
-- **Use Case:** Conversational career counseling, resume analysis
-- **Features:** Natural language processing, detailed recommendations
-- **Fallback:** Gemini API
+### Student Onboarding
 
-### 2. Google Gemini API  
-- **Use Case:** Reasoning tasks, roadmap planning, aptitude analysis
-- **Features:** Complex reasoning, timeline generation
-- **Fallback:** OpenRouter
+- Simple 4-step process
+- Basic information collection
+- Academic performance tracking
+- Interest and personality assessment
+- Goal setting
 
-### 3. Hugging Face API
-- **Use Case:** Skill classification, text embeddings, resume parsing
-- **Features:** Specialized NLP models, sentiment analysis
-- **Fallback:** OpenAI
+### Career Recommendations
 
-### 4. OpenRouter API
-- **Use Case:** Fallback for free/open-source models
-- **Features:** Cost-effective AI responses
-- **Models:** Mistral, Llama, Claude alternatives
+- Personalized suggestions based on:
+  - Academic performance (40-70% range)
+  - Interests and personality
+  - Stream selection (Science/Commerce/Arts)
+  - Career goals
 
-## 🏛️ Government Data Integration
+### Parent Mode
 
-### data.gov.in APIs
-- **Employment Statistics:** Job market trends, demand data
-- **Education Data:** Skill development programs, success rates  
-- **Scholarship Information:** Government schemes, eligibility criteria
-- **Regional Data:** State-wise opportunities, local programs
+- Detailed explanations for parents
+- Career prospects and salary information
+- Investment requirements
+- Future scope and job security
 
-### Real-time Insights
-- Job demand trends (e.g., "AI engineers demand up 34% in 2025")
-- Salary benchmarks by location and experience
-- Government skill development initiatives
-- Scholarship deadlines and application links
+### Career Comparison
 
-## 🎯 Unique Features
+- Side-by-side comparison of career options
+- Duration, difficulty, and cost analysis
+- Job demand and salary comparison
+- Personalized recommendations
 
-### 1. Voice Assistant
-- **Speech-to-Text:** Voice commands for navigation
-- **Text-to-Speech:** Audio feedback and guidance
-- **Multilingual:** Support for Indian languages
-- **Commands:** "Show recommendations", "Start interview practice"
+## Career Categories
 
-### 2. Gamification System
-- **XP Points:** Earn points for completing tasks
-- **Badges:** Achievement system for milestones
-- **Levels:** Progress tracking with visual indicators
-- **Leaderboards:** Compare progress with peers
+The platform focuses on careers that are:
 
-### 3. Resume Analyzer
-- **AI Parsing:** Extract skills, experience, education
-- **Feedback:** Strengths, weaknesses, improvement suggestions
-- **Scoring:** Overall resume quality score
-- **Optimization:** Tailored recommendations for target roles
+- **Accessible**: Lower academic requirements
+- **Practical**: Real-world job opportunities
+- **Growing**: Emerging fields with good prospects
+- **Diverse**: Options across different streams
 
-### 4. Interview Coach
-- **AI Questions:** Role-specific interview questions
-- **Difficulty Levels:** Easy, medium, hard practice modes
-- **Categories:** Technical, behavioral, situational questions
-- **Feedback:** Expected answers and improvement tips
+## Philosophy
 
-### 5. Government Schemes Finder
-- **Personalized Matching:** Based on user profile and eligibility
-- **Real-time Data:** Updated scheme information
-- **Application Links:** Direct links to government portals
-- **Deadline Tracking:** Important dates and reminders
+This platform believes that:
 
-## 📱 User Journey
+- Every student has potential regardless of academic scores
+- Success comes in many forms beyond traditional careers
+- Practical skills are as valuable as academic knowledge
+- Parents should be involved in career decisions
+- Career guidance should be realistic and achievable
 
-1. **Landing Page** → Engaging introduction with feature highlights
-2. **Onboarding Wizard** → Profile building + interest assessment  
-3. **Enhanced Dashboard** → Multi-tab interface with all features
-4. **Career Recommendations** → AI-powered matches with market data
-5. **Learning Roadmap** → Interactive timeline with resources
-6. **Government Schemes** → Personalized scholarship recommendations
-7. **Resume Analysis** → Upload and get AI feedback
-8. **Interview Practice** → Role-specific question practice
-9. **Voice Interaction** → Hands-free navigation and guidance
-10. **Progress Tracking** → Gamified learning journey
+## Contributing
 
-## 🚀 Getting Started
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-### Prerequisites
-- Node.js 18+
-- API keys for AI providers
-- data.gov.in API access
+## License
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/career-advisor.git
-cd career-advisor
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Add your API keys to .env
-
-# Start development server
-npm run dev
-```
-
-### Environment Variables
-```env
-# AI Provider API Keys
-OPENAI_API_KEY=your_openai_api_key
-HUGGINGFACE_API_KEY=your_huggingface_api_key
-GOOGLE_GEMINI_API_KEY=your_gemini_api_key
-OPENROUTER_API_KEY=your_openrouter_api_key
-
-# Government Data APIs
-DATA_GOV_IN_API_KEY=your_data_gov_in_api_key
-
-# Optional: External APIs
-COURSERA_API_KEY=your_coursera_api_key
-EDX_API_KEY=your_edx_api_key
-```
-
-## 🎯 Demo Script (5 minutes)
-
-1. **Problem Introduction** (30s)
-   - Career confusion among students and professionals
-   - Lack of personalized guidance and market insights
-
-2. **Solution Overview** (30s)
-   - Multi-AI powered career advisor
-   - Government data integration
-   - Comprehensive feature set
-
-3. **Live Demo** (3 minutes)
-   - Quick onboarding flow
-   - AI career recommendations with market data
-   - Government schemes matching
-   - Resume analysis with feedback
-   - Voice assistant interaction
-   - Gamification features
-
-4. **Impact & Future** (1 minute)
-   - Democratizing career guidance
-   - Supporting government skill initiatives
-   - Scaling to millions of users
-
-## 🏆 Hackathon Highlights
-
-### Innovation
-- **Multi-AI Integration:** First career advisor using 4 AI providers
-- **Government Data:** Real-time integration with official APIs
-- **Voice Interface:** Hands-free career guidance
-- **Gamification:** Making career planning engaging
-
-### Technical Excellence
-- **Robust Architecture:** Fallback systems for AI providers
-- **Real-time Data:** Live job market and scheme information
-- **Responsive Design:** Works across all devices
-- **Performance:** Optimized loading and caching
-
-### Social Impact
-- **Accessibility:** Voice support for differently-abled users
-- **Inclusivity:** Multilingual support for diverse users
-- **Government Alignment:** Supporting national skill initiatives
-- **Scalability:** Built to serve millions of users
-
-## 🔮 Future Roadmap
-
-### Phase 1 (Next 3 months)
-- Real API integrations with all providers
-- Advanced voice commands and responses
-- Peer networking and mentorship features
-- Mobile app development
-
-### Phase 2 (6 months)
-- AI-powered job matching with companies
-- Virtual reality interview simulations
-- Blockchain-based skill certifications
-- Advanced analytics and insights
-
-### Phase 3 (1 year)
-- International expansion
-- Corporate partnerships
-- Advanced AI models training
-- Government policy recommendations
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI, Google, Hugging Face, and OpenRouter for AI capabilities
-- Government of India for open data initiatives
-- React and TypeScript communities
-- All contributors and testers
-
----
-
-**Built with ❤️ for the future of career guidance in India**
+This project is licensed under the MIT License.
